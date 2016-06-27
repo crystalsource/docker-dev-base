@@ -1,5 +1,5 @@
 FROM ubuntu:14.04
-MAINTAINER Mike Bertram <bertram@nexus-netsoft.com>
+MAINTAINER Mike Bertram <contact@crystalsource.de>
 
 # Non interactive
 ENV DEBIAN_FRONTEND noninteractive
