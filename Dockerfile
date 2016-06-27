@@ -9,7 +9,7 @@ RUN apt-get update && apt-get -y upgrade
 RUN apt-get -y --force-yes install supervisor openssh-server git vim curl
 
 # SSHD
-RUN mkdir -p /var/lock/apache2 /var/run/apache2 /var/run/sshd /var/log/supervisor
+RUN mkdir -p /var/run/sshd /var/log/supervisor
 RUN echo 'root:crystal' | chpasswd
 RUN sed -i 's/PermitRootLogin without-password/PermitRootLogin yes/' /etc/ssh/sshd_config
 RUN sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so@g' -i /etc/pam.d/sshd
